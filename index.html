@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Wave</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <h1 class="logo">The Wave</h1>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#hero">Главная</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#products">Каталог</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="hero">
+    <div class="container">
+      <h2>Новая коллекция 2025</h2>
+      <p>будь на волне — tolqyñda bol</p>
+      <a href="#products" class="btn">Перейти к товарам</a>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container">
+      <h2>О нас</h2>
+      <p>Мы — бренд The Wave. Создаём одежду, которая подчёркивает свободу, стиль и индивидуальность. Мы вдохновлены уличной модой и стремимся к качеству в каждой детали.</p>
+    </div>
+  </section>
+
+  <section class="products" id="products">
+    <div class="container">
+      <h2>Футболки из коллекции "PRIME 2025"</h2>
+      <div class="product-grid">
+        
+        <!-- Продукт 1 -->
+<div class="product-card">
+  <div class="image-slider">
+    <img src="speredi01.JPG" alt="Футболка спереди" class="slider-image active">
+    <img src="szadi02.JPG" alt="Футболка сзади" class="slider-image">
+    <button class="prev-btn">◀</button>
+    <button class="next-btn">▶</button>
+  </div>
+  <h3>Футболка “WAVES”</h3>
+  <p>₸ 15 000</p>
+  <p>Форма: оверсайз</p>
+  <p>Состав: 95% хлопок, 5% эластан</p>
+  <p>Плотность: 240 г</p>
+  <p>Размеры: S – 2XL</p>
+  <p>Доставка: по Казахстану и всему миру 🌎</p>
+  <a href="https://t.me/wave_catchit" class="btn" target="_blank">Купить</a>
+</div>
+
+
+
+<!-- Продукт 2 -->
+<div class="product-card">
+  <div class="image-slider">
+    <img src="speredi1.JPG" alt="Футболка спереди" class="slider-image active">
+    <img src="szadi2.JPG" alt="Футболка сзади" class="slider-image">
+    <button class="prev-btn">◀</button>
+    <button class="next-btn">▶</button>
+  </div>
+  <h3>Футболка “WAVES”</h3>
+  <p>₸ 15 000</p>
+  <p>Форма: оверсайз</p>
+  <p>Состав: 95% хлопок, 5% эластан</p>
+  <p>Плотность: 240 г</p>
+  <p>Размеры: S – 2XL</p>
+  <p>Доставка: по Казахстану и всему миру 🌎</p>
+  <a href="https://t.me/wave_catchit" class="btn" target="_blank">Купить</a>
+</div>
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>Be free, be independent, be WAVE</p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/wave.catchit/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+        </a>
+        <a href="https://t.me/wave_catchit" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+  document.querySelectorAll('.image-slider').forEach(slider => {
+    const images = slider.querySelectorAll('.slider-image');
+    let current = 0;
+
+    const updateImages = () => {
+      images.forEach((img, index) => {
+        img.classList.toggle('active', index === current);
+      });
+    };
+
+    slider.querySelector('.prev-btn').addEventListener('click', () => {
+      current = (current - 1 + images.length) % images.length;
+      updateImages();
+    });
+
+    slider.querySelector('.next-btn').addEventListener('click', () => {
+      current = (current + 1) % images.length;
+      updateImages();
+    });
+
+    updateImages();
+  });
+</script>
+
+
+</body>
+</html>
